@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const NODE = 'http://localhost:5000/api';
-const PYTHON = 'http://localhost:8000/analytics';
+const NODE = 'https://finance-dashboard-server-6g1l.onrender.com/';
+const PYTHON = 'https://finance-dashboard-analytics.onrender.com/';
 
 // Expense APIs
 export const addExpense = (data) =>
