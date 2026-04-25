@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const NODE = 'https://finance-dashboard-server-6g1l.onrender.com/';
-const PYTHON = 'https://finance-dashboard-analytics.onrender.com/';
+const NODE = 'https://finance-dashboard-server-6g1l.onrender.com';
+const PYTHON = 'https://finance-dashboard-analytics.onrender.com';
 
 // Expense APIs
 export const addExpense = (data) =>
