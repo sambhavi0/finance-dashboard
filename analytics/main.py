@@ -4,6 +4,7 @@ from pymongo import MongoClient
 import pandas as pd
 import numpy as np
 from dotenv import load_dotenv
+import certifi
 import os
 
 load_dotenv()
@@ -13,8 +14,7 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], all
 
 client = MongoClient(
     os.getenv("MONGO_URI", "mongodb://localhost:27017/financedashboard"),
-    tls=True,
-    tlsAllowInvalidCertificates=True
+    tlsCAFile=certifi.where()
 )
 db = client["financedashboard"]
 
