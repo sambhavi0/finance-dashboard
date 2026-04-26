@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
         const budget = await Budget.findOneAndUpdate(
             { category, month },
             { amount },
-            { upsert: true, new: true }
+            { upsert: true, returnDocument: 'after' }
         );
         res.json(budget);
     } catch (err) {
