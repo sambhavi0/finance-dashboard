@@ -11,7 +11,11 @@ app = FastAPI()
 
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
-client = MongoClient(os.getenv("MONGO_URI", "mongodb://localhost:27017/financedashboard"))
+client = MongoClient(
+    os.getenv("MONGO_URI", "mongodb://localhost:27017/financedashboard"),
+    tls=True,
+    tlsAllowInvalidCertificates=True
+)
 db = client["financedashboard"]
 
 def get_expenses_df():
