@@ -33,4 +33,18 @@ py -m uvicorn main:app --reload --port 8000
 cd client
 npm run dev
 
+## Screenshots
+
+### Full Dashboard
+![Full Dashboard](screenshots/dashboard.png)
+
+### Spending by Category
+![Spending by Category](screenshots/category-chart.png)
+
+### Monthly Trend
+![Monthly Trend](screenshots/monthly-trend.png)
+
+### Budget vs Actual
+![Budget vs Actual](screenshots/budget-vs-actual.png)
+
 🔗 **Live Demo**: https://finance-dashboard-eight-ashen-75.vercel.app/
