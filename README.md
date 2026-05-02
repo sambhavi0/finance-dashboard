@@ -32,3 +32,5 @@ py -m uvicorn main:app --reload --port 8000
 ### React frontend
 cd client
 npm run dev
+
+🔗 **Live Demo**: https://finance-dashboard-eight-ashen-75.vercel.app/
