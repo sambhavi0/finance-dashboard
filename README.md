@@ -1,6 +1,8 @@
 # Personal Finance Dashboard
 
-A full-stack finance tracking app with real-time analytics.
+🔗 **Live Demo:** [finance-dashboard-eight-ashen-75.vercel.app](https://finance-dashboard-eight-ashen-75.vercel.app)
+
+A full stack finance tracking app with real time analytics built using MERN stack and Python.
 
 ## Tech Stack
 - **Frontend:** React, Recharts, Axios
@@ -15,23 +17,7 @@ A full-stack finance tracking app with real-time analytics.
 - Budget vs actual spending (bar chart)
 
 ## Architecture
-Two separate servers — Node handles CRUD operations, 
-Python/FastAPI handles all analytics and chart data. 
-Both connect to the same MongoDB database.
-
-## Run locally
-
-### Node server
-cd server
-node index.js
-
-### Python analytics
-cd analytics
-py -m uvicorn main:app --reload --port 8000    
-
-### React frontend
-cd client
-npm run dev
+Two separate servers: Node handles CRUD operations, Python/FastAPI handles all analytics and chart data. Both connect to the same MongoDB Atlas database.
 
 ## Screenshots
 
@@ -47,4 +33,22 @@ npm run dev
 ### Budget vs Actual
 ![Budget vs Actual](screenshots/budget-vs-actual.png)
 
-🔗 **Live Demo**: https://finance-dashboard-eight-ashen-75.vercel.app/
+## Run locally
+
+**Node server**
+```bash
+cd server
+node index.js
+```
+
+**Python analytics**
+```bash
+cd analytics
+uvicorn main:app --reload --port 8000
+```
+
+**React frontend**
+```bash
+cd client
+npm run dev
+```
