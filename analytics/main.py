@@ -28,7 +28,6 @@ def get_expenses_df():
     df['day'] = df['date'].dt.date.astype(str)
     return df
 
-# 1. Spending by category
 @app.get("/analytics/by-category")
 def spending_by_category(month: str = None):
     df = get_expenses_df()
@@ -39,7 +38,6 @@ def spending_by_category(month: str = None):
     result = df.groupby('category')['amount'].sum().reset_index()
     return result.to_dict(orient='records')
 
-# 2. Monthly trend (no s — matches frontend)
 @app.get("/analytics/monthly-trend")
 def monthly_trend():
     df = get_expenses_df()
@@ -49,7 +47,6 @@ def monthly_trend():
     result = result.sort_values("month")
     return result.to_dict(orient='records')
 
-# 3. Biggest expense days
 @app.get("/analytics/biggest-days")
 def biggest_expense_days(limit: int = 5):
     df = get_expenses_df()
@@ -59,7 +56,6 @@ def biggest_expense_days(limit: int = 5):
     result = result.sort_values("amount", ascending=False).head(limit)
     return result.to_dict(orient='records')
 
-# 4. Budget vs actual
 @app.get("/analytics/budget-vs-actual")
 def budget_vs_actual(month: str):
     df = get_expenses_df()
