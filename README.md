@@ -2,7 +2,7 @@
 
 🔗 **Live Demo:** [finance-dashboard-eight-ashen-75.vercel.app](https://finance-dashboard-eight-ashen-75.vercel.app)
 
-**Read about the architecture decisions in this project**: [Why My Finance Dashboard Has Two Backends (And What Broke When I Deployed It)](https://dev.to/sambhavi0/why-my-finance-dashboard-has-two-backends-and-what-broke-when-i-deployed-it-28l8)
+**Read about the architecture decisions in this project**: [Why My Finance Dashboard Has Two Backends (And What Broke When I Deployed It)](https://medium.com/@sambhavi067/why-my-finance-dashboard-has-two-backends-and-what-broke-when-i-deployed-it-73d42e525082)
 
 A full stack finance tracking app with real time analytics built using MERN stack and Python.
 
